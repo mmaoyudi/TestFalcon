@@ -5,7 +5,7 @@ global with sharing class AccountsList {
     global static List<Account> getAccounts() {
         List<Account> accts = new List<Account>();
 
-        String searchVal = RestContext.request.params.get('namesearch');
+        String searchVal = RestContext.request.params.get('namesearch11');
         String billingState = RestContext.request.params.get('billingst');
         if (searchVal != null) {
             String searchStr = '%' + searchVal + '%';
