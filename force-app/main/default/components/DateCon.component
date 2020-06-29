@@ -1,0 +1,14 @@
+<apex:component controller="DateConController">
+    <style>
+        .dateFormat  {
+            display: none;
+        }
+    </style>
+     <apex:attribute name="key" description="Label on left listbox."
+        type="String" assignTo="{!keyValue}"  required="true" />
+    <apex:attribute name="Value" description="Label on left listbox."
+        type="map" assignTo="{!valueMap}"  required="true" />
+    <apex:inputField style="display: none;"
+     value="{!con.Birthdate}"/>
+    <apex:inputText id="dateValueStr" value="{!dateValueStr}" size="12" onfocus="DatePicker.pickDate(true, '{!$Component.dateValueStr}', false)"/>
+</apex:component>

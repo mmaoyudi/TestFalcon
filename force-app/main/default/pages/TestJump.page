@@ -1,0 +1,24 @@
+<apex:page controller="myclass">
+<apex:form id="allform">
+<apex:commandButton value="Test" action="{!submit}" reRender=""/>
+<apex:outputField value="{!acc.TestText__c}"/>
+{!!equipmentSetManagmentCodeEditableFlag}
+{!equipmentSetManagmentCodeEditableFlag}
+apex:inputField
+<!-- <apex:inputField value="{!acc.TestText__c}"/> -->
+apex:inputText
+<apex:inputText value="{!acc.TestText__c}"/>
+<!-- <apex:selectList value="{!acc.TestText__c}" multiselect="true">
+           <apex:selectOption itemValue="red" itemLabel="Red"/>
+            <apex:selectOption itemValue="white" itemLabel="White"/>
+            <apex:selectOption itemValue="blue" itemLabel="Blue"/>
+
+        </apex:selectList>
+        <apex:selectList value="{!acc.Name}" multiselect="true">
+           <apex:selectOption itemValue="red" itemLabel="Red"/>
+            <apex:selectOption itemValue="white" itemLabel="White"/>
+            <apex:selectOption itemValue="blue" itemLabel="Blue"/>
+        </apex:selectList>
+        <apex:inputCheckbox value="{!acc.TestText__c}"/>-->
+</apex:form>
+</apex:page>

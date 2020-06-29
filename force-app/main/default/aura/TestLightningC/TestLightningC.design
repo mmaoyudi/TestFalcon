@@ -1,0 +1,4 @@
+<design:component>
+	<design:attribute name="subject1" label="Subject" description="Name of the person you want to greet" />
+    <design:attribute name="greeting1" label="Greeting" />
+</design:component>

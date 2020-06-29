@@ -1,0 +1,8 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,forceCommunity:availableForAllPageTypes,force:lightningQuickAction,lightning:isUrlAddressable" access="global" >
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="par" type="String"/>
+    <aura:attribute name="subject1" type="String"/>
+    <aura:attribute name="greeting1" type="String"/>
+    <lightning:workspaceAPI aura:id="workspace"/>
+    <a id="aaaaa">aaaaa</a>
+</aura:component>

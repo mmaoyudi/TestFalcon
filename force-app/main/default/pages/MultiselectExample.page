@@ -1,0 +1,25 @@
+<apex:page controller="MultiselectExampleController" docType="html-5.0">
+    <apex:form id="TestFrom">
+        <apex:pageBlock title="Contacts">
+            <c:MultiselectPicklist leftLabel="Available Contacts"
+                leftOption="{!allContacts}"
+                rightLabel="Selected Contacts"
+                rightOption="{!selectedContacts}"
+                size="14"
+                width="150px"/>
+            <c:DateCon Value="{!testDate}" key="testDate"/>
+            <c:NumberCon Value="{!testDate}" key="testnum"/>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Save" action="{!save}"/>
+            </apex:pageBlockButtons>
+        </apex:pageBlock>
+        
+         <!-- <apex:inputText id="dateValueStr1"  size="12" onfocus="DatePicker.pickDate(true, '{!$Component.dateValueStr1}', false)"/> -->
+       <div>
+    </div>
+    </apex:form>
+    <apex:outputText >{!message}</apex:outputText>
+    123
+        <apex:outputText value="{!testDate}"></apex:outputText>
+    234
+</apex:page>

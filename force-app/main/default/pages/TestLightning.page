@@ -1,0 +1,24 @@
+<apex:page >
+  <apex:slds />
+  <apex:pageMessages />
+  <apex:includeLightning />
+
+  <div class="slds">
+    <div id="lt_comp" />
+  </div>
+<!--     <div id="firstlogin" class="slds-spinner_container">
+      <div class="slds-spinner--brand slds-spinner slds-spinner--medium" role="alert">
+         <div class="slds-assistive-text">Loading</div>
+            <div class="slds-spinner__dot-a"></div>
+            <div class="slds-spinner__dot-b"></div>
+      </div>
+   </div> -->
+  <script>
+      var appname='c:TestApp';
+      var settingname = 'c:TestLightningC';
+      $Lightning.use(appname, function() {
+        $Lightning.createComponent(settingname,{},"lt_comp",function(cmp) {
+        });
+      });
+  </script>
+</apex:page>

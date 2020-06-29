@@ -1,0 +1,25 @@
+<apex:component controller="NumberConController">
+    <apex:attribute name="key" description="Label on left listbox."
+        type="String" assignTo="{!keyValue}"  required="true" />
+    <apex:attribute name="Value" description="Label on left listbox."
+        type="map" assignTo="{!valueMap}"  required="true" />
+    <apex:inputText id="numDoc" value="{!valueStr}" html-type="number" onkeyup="changeNumber(this);"/>
+    <script>
+        function changeNumber(doc) {
+            var num1 = (doc.value.replace(/,/g, "") || 0).toString();
+            var numList = num1.split('.');
+            var num = numList[0];
+            var result = '';
+            while (num.length > 3) {
+                result = ',' + num.slice(-3) + result;
+                num = num.slice(0, num.length - 3);
+            }
+            if (num) { result = num + result; }
+            if (numList.length > 1) {
+                result += '.' + numList[1];
+            }
+            doc.value = result;
+        }
+        changeNumber(document.getElementById('{!$Component.numDoc}'));
+    </script>
+</apex:component>
